@@ -56,3 +56,18 @@ document.getElementById("produtos-container").addEventListener("click", function
     localStorage.setItem("carrinho", JSON.stringify(carrinho))
     alert("Produto adicionado com sucesso!!!")
 })
+
+let carrinho = [];
+
+function adicionarCarrinho(nome, preco){
+
+    carrinho.push({
+        nome: nome,
+        preco: preco
+    });
+
+    document.getElementById("contador").innerText = carrinho.length;
+
+    alert("✅ Produto adicionado ao carrinho!");
+
+}
